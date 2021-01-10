@@ -7,7 +7,6 @@ sizePicker.addEventListener('submit', function(event) {
   event.preventDefault();
   height = document.getElementById('inputHeight').value;
   width = document.getElementById('inputWidth').value;
-  console.log("Height: " + height + " & Width: " + width); // to check if values are stored correctly
   makeGrid(height, width);
   }
 )
