@@ -1,10 +1,9 @@
-// Select color input
-// Select size input
+
 var height, width, color;
 
-// When size is submitted by the user, call makeGrid()
+
 sizePicker.addEventListener('submit', function(event) {
-  event.preventDefault();
+  event.preventDefault(); // prevents page from reloading after each submit
   height = document.getElementById('inputHeight').value;
   width = document.getElementById('inputWidth').value;
   makeGrid(height, width);
@@ -15,7 +14,7 @@ sizePicker.addEventListener('submit', function(event) {
 function makeGrid(height, width) {
   const table = document.getElementById('pixelCanvas');
   color = document.getElementById('colorPicker');
-  table.innerHTML = '';
+  table.innerHTML = ''; // resets table rows and cells to zero after each submit
   for (var i = 0; i < height; i++ ) {
     let row = table.insertRow(i);
     for (var j = 0; j < width; j++) {
